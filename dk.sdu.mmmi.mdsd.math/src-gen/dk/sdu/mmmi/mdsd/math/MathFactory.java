@@ -33,6 +33,24 @@ public interface MathFactory extends EFactory
   MathExp createMathExp();
 
   /**
+   * Returns a new object of class '<em>External Method</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>External Method</em>'.
+   * @generated
+   */
+  ExternalMethod createExternalMethod();
+
+  /**
+   * Returns a new object of class '<em>Parameter</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Parameter</em>'.
+   * @generated
+   */
+  Parameter createParameter();
+
+  /**
    * Returns a new object of class '<em>Var Binding</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -49,6 +67,15 @@ public interface MathFactory extends EFactory
    * @generated
    */
   Expression createExpression();
+
+  /**
+   * Returns a new object of class '<em>External Use</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>External Use</em>'.
+   * @generated
+   */
+  ExternalUse createExternalUse();
 
   /**
    * Returns a new object of class '<em>Let Binding</em>'.

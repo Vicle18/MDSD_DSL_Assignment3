@@ -66,8 +66,11 @@ public class MathFactoryImpl extends EFactoryImpl implements MathFactory
     switch (eClass.getClassifierID())
     {
       case MathPackage.MATH_EXP: return createMathExp();
+      case MathPackage.EXTERNAL_METHOD: return createExternalMethod();
+      case MathPackage.PARAMETER: return createParameter();
       case MathPackage.VAR_BINDING: return createVarBinding();
       case MathPackage.EXPRESSION: return createExpression();
+      case MathPackage.EXTERNAL_USE: return createExternalUse();
       case MathPackage.LET_BINDING: return createLetBinding();
       case MathPackage.BINDING: return createBinding();
       case MathPackage.VARIABLE_USE: return createVariableUse();
@@ -99,6 +102,30 @@ public class MathFactoryImpl extends EFactoryImpl implements MathFactory
    * @generated
    */
   @Override
+  public ExternalMethod createExternalMethod()
+  {
+    ExternalMethodImpl externalMethod = new ExternalMethodImpl();
+    return externalMethod;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Parameter createParameter()
+  {
+    ParameterImpl parameter = new ParameterImpl();
+    return parameter;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public VarBinding createVarBinding()
   {
     VarBindingImpl varBinding = new VarBindingImpl();
@@ -115,6 +142,18 @@ public class MathFactoryImpl extends EFactoryImpl implements MathFactory
   {
     ExpressionImpl expression = new ExpressionImpl();
     return expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ExternalUse createExternalUse()
+  {
+    ExternalUseImpl externalUse = new ExternalUseImpl();
+    return externalUse;
   }
 
   /**

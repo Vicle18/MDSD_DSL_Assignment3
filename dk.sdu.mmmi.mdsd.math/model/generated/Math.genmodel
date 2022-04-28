@@ -7,12 +7,25 @@
   <genPackages prefix="Math" basePackage="dk.sdu.mmmi.mdsd" disposableProviderFactory="true"
       fileExtensions="math" ecorePackage="Math.ecore#/">
     <genClasses ecoreClass="Math.ecore#//MathExp">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//MathExp/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Math.ecore#//MathExp/externals"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Math.ecore#//MathExp/variables"/>
+    </genClasses>
+    <genClasses ecoreClass="Math.ecore#//ExternalMethod">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//ExternalMethod/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Math.ecore#//ExternalMethod/parameters"/>
+    </genClasses>
+    <genClasses ecoreClass="Math.ecore#//Parameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Parameter/name"/>
     </genClasses>
     <genClasses ecoreClass="Math.ecore#//VarBinding">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Math.ecore#//VarBinding/expression"/>
     </genClasses>
     <genClasses ecoreClass="Math.ecore#//Expression"/>
+    <genClasses ecoreClass="Math.ecore#//ExternalUse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//ExternalUse/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Math.ecore#//ExternalUse/parameters"/>
+    </genClasses>
     <genClasses ecoreClass="Math.ecore#//LetBinding">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Math.ecore#//LetBinding/binding"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Math.ecore#//LetBinding/body"/>
